@@ -1,0 +1,2 @@
+# TIP
+KOD DÜZENLEME
