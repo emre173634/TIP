@@ -1,0 +1,1392 @@
+class TIP():
+
+    def __init__(self):
+
+        def yakaladı(liste):
+            liste = liste.split("\t")
+            sicil = liste[0]
+            yeşil = liste[1]
+            yeşil = int(yeşil)
+
+            return sicil, yeşil
+
+        def kaçırdı(liste):
+            liste = liste.split("\t")
+            sicil = liste[0]
+            kırmızı = liste[2]
+            kırmızı = int(kırmızı)
+
+            return sicil, kırmızı
+
+        eklenen = []
+        yeşil_sözlük = {}
+        kırmızı_sözlük = {}
+
+        with open("C:/Users/Msi/Desktop/bölgeler/mavi yaka 4.txt", "r", encoding="utf-8") as file:
+            for sıra in file:
+                eklenen.append(sıra.strip())
+                sicil, yeşil = yakaladı(sıra)
+
+                if sicil not in yeşil_sözlük:
+                    yeşil_sözlük[sicil] = yeşil
+                else:
+                    yeşil_sözlük[sicil] += yeşil
+                sicil, kırmızı = kaçırdı(sıra)
+                if sicil not in kırmızı_sözlük:
+                    kırmızı_sözlük[sicil] = kırmızı
+                else:
+                    kırmızı_sözlük[sicil] += kırmızı
+
+            with open("C:/Users/Msi/Desktop/bölgeler/mavi yaka 4.txt", "w", encoding="utf-8") as file:
+                for sicil in yeşil_sözlük:
+                    yeşil_toplam = yeşil_sözlük[sicil]
+                    if sicil in kırmızı_sözlük:
+                        kırmızı_toplam = kırmızı_sözlük[sicil]
+                    else:
+                        kırmızı_toplam = 0
+                    toplam = sicil + "\t" + str(yeşil_toplam) + "\t" + str(kırmızı_toplam)
+                    file.write(toplam + "\n")
+
+        with open("C:/Users/Msi/Desktop/bölgeler/iç hat.txt", "r", encoding="utf-8") as file:
+            for sıra in file:
+                eklenen.append(sıra.strip())
+                sicil, yeşil = yakaladı(sıra)
+
+                if sicil not in yeşil_sözlük:
+                    yeşil_sözlük[sicil] = yeşil
+                else:
+                    yeşil_sözlük[sicil] += yeşil
+                sicil, kırmızı = kaçırdı(sıra)
+                if sicil not in kırmızı_sözlük:
+                    kırmızı_sözlük[sicil] = kırmızı
+                else:
+                    kırmızı_sözlük[sicil] += kırmızı
+
+            with open("C:/Users/Msi/Desktop/bölgeler/iç hat.txt", "w", encoding="utf-8") as file:
+                for sicil in yeşil_sözlük:
+                    yeşil_toplam = yeşil_sözlük[sicil]
+                    if sicil in kırmızı_sözlük:
+                        kırmızı_toplam = kırmızı_sözlük[sicil]
+                    else:
+                        kırmızı_toplam = 0
+                    toplam = sicil + "\t" + str(yeşil_toplam) + "\t" + str(kırmızı_toplam)
+                    file.write(toplam + "\n")
+
+
+
+
+
+        def karmaşık_liste_oluşturma(liste):
+
+            liste = liste.split("\t")
+
+            sicil = (liste[0])
+
+            yeşil = liste[1]
+
+            kırmızı = liste[2]
+
+            if "908928" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "909010" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "909014" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "909022" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "909056" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "909080" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "909082" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "910199" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "910367" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "911510" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "912522" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "912528" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "913354" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "913408" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "913433" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "913660" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "913661" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "913809" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "913895" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "914272" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "915352" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "915457" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "915463" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "915992" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "916017" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "916018" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "916023" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "916054" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "916343" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "916345" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "916882" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "916887" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "916939" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "917102" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "917116" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "917127" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "917154" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "917218" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "917237" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "917812" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "918563" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "918624" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "918625" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "918819" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "919882" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "919925" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "920195" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "920197" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "920201" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "920204" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "920205" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "920264" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "920269" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "920270" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "920275" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "920280" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "920289" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "920290" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "920298" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "920300" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "920314" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "920318" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "920331" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "920342" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "920344" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "920629" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "920667" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "920763" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "920775" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "920778" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "920885" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "920893" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "920894" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "921452" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "921517" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "921906" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "922717" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "922741" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "922836" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "922839" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "922847" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "923080" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "923081" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "923128" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "923342" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "923343" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "923378" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "923379" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "923622" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "923623" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "923624" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "923626" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "923628" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "923630" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "923631" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "923632" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "923635" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "923671" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "923729" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "923734" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "923735" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "923736" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "923737" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "923738" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "923739" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "923740" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "923741" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "923742" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "923744" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "923747" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "923748" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "923766" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "923772" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "923773" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "923776" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "923766" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "923826" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "923829" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "923831" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "923836" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "923846" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "923918" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "923920" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "923921" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "923922" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "923926" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "923928" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "923929" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "923931" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "923933" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "923934" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "923935" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "923936" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "923937" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "923978" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "923982" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "923986" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "923992" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "923994" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "923999" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "924036" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "924039" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "924040" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "924041" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "924042" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "924043" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "924045" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "924048" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "924049" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "924050" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "924052" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "924053" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "924054" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "924055" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "924056" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "924057" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "924058" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "924089" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "924090" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "924222" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "924223" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "924224" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "924225" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "924226" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "924228" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "924229" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "924230" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "924405" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "924407" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "924409" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "924413" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "924414" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "924417" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "924418" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "924423" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "924424" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "924647" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "924650" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "924651" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "924652" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "924654" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "924656" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "924658" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "924659" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "924660" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "924662" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "924665" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "924667" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "924669" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "924678" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "924688" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "924718" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "924768" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "924769" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "924770" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "924772" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "924774" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "924778" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "924779" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "924780" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "924862" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "924874" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "924875" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "924876" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "924878" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "924880" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "924882" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "924883" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "924885" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "924996" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "924998" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+            elif "925157" == sicil:
+                tıp = sicil + "\t" + yeşil + "\t" + kırmızı
+
+            else:
+
+                tıp =""
+
+            return tıp
+
+
+
+
+# HUB
+        with open("C:/Users/Msi/Desktop/bölgeler/hub.txt", "r", encoding="utf-8") as file:
+
+            eklenenler = []
+            for i in file:
+                eklenenler.append(karmaşık_liste_oluşturma(i))
+            with open("C:/Users/Msi/Desktop/Program Sonu Çıktılar/hub çıktı.txt", "w",
+                      encoding="utf-8") as file2:
+                for i in eklenenler:
+                    file2.write(i)
+
+# MAVİ YAKA 1
+
+        with open("C:/Users/Msi/Desktop/bölgeler/mavi yaka bir.txt", "r", encoding="utf-8") as file:
+            eklenenler = []
+            for i in file:
+                eklenenler.append(karmaşık_liste_oluşturma(i))
+            with open("C:/Users/Msi/Desktop/Program Sonu Çıktılar/mavi 1 çıktı.txt", "w",
+                      encoding="utf-8") as file2:
+                for i in eklenenler:
+                    file2.write(i)
+
+
+# GDY ZEMİN
+
+        with open("C:/Users/Msi/Desktop/bölgeler/gdy zemin.txt", "r", encoding="utf-8") as file:
+            eklenenler = []
+            for i in file:
+                        eklenenler.append(karmaşık_liste_oluşturma(i))
+            with open("C:/Users/Msi/Desktop/Program Sonu Çıktılar/gdy zemin çıktı.txt", "w",
+                              encoding="utf-8") as file2:
+                for i in eklenenler:
+                    file2.write(i)
+
+# GDY 1. KAT
+
+        with open("C:/Users/Msi/Desktop/bölgeler/gdy 1 kat.txt", "r", encoding="utf-8") as file:
+
+            eklenenler = []
+            for i in file:
+                eklenenler.append(karmaşık_liste_oluşturma(i))
+            with open("C:/Users/Msi/Desktop/Program Sonu Çıktılar/gdy 1 kat çıktı.txt", "w",
+                        encoding="utf-8") as file2:
+                for i in eklenenler:
+                    file2.write(i)
+
+# MAVİ YAKA 1
+
+        with open("C:/Users/Msi/Desktop/bölgeler/mavi yaka bir.txt", "r", encoding="utf-8") as file:
+            eklenenler = []
+            for i in file:
+                eklenenler.append(karmaşık_liste_oluşturma(i))
+            with open("C:/Users/Msi/Desktop/Program Sonu Çıktılar/mavi 1 çıktı.txt", "w",encoding="utf-8") as file2:
+                for i in eklenenler:
+                    file2.write(i)
+
+# MAVİ YAKA 2
+
+
+        with open("C:/Users/Msi/Desktop/bölgeler/mavi yaka iki.txt", "r", encoding="utf-8") as file:
+            eklenenler = []
+            for i in file:
+                eklenenler.append(karmaşık_liste_oluşturma(i))
+            with open("C:/Users/Msi/Desktop/Program Sonu Çıktılar/mavi 2 çıktı.txt", "w",
+                      encoding="utf-8") as file2:
+                for i in eklenenler:
+                    file2.write(i)
+
+# MAVİ YAKA 3
+
+        with open("C:/Users/Msi/Desktop/bölgeler/mavi yaka üç.txt", "r", encoding="utf-8") as file:
+            eklenenler = []
+            for i in file:
+                eklenenler.append(karmaşık_liste_oluşturma(i))
+            with open("C:/Users/Msi/Desktop/Program Sonu Çıktılar/mavi 3 çıktı.txt", "w",
+                      encoding="utf-8") as file2:
+                for i in eklenenler:
+                    file2.write(i)
+
+# MAVİ YAKA 4
+
+        with open("C:/Users/Msi/Desktop/bölgeler/mavi yaka 4.txt", "r", encoding="utf-8") as file:
+            eklenenler = []
+            for i in file:
+                eklenenler.append(karmaşık_liste_oluşturma(i))
+                with open("C:/Users/Msi/Desktop/Program Sonu Çıktılar/mavi 4 çıktı.txt", "w",
+                        encoding="utf-8") as file2:
+                        for i in eklenenler:
+                            file2.write(i)
+
+# EXPORT PERSONEL
+
+        with open("C:/Users/Msi/Desktop/bölgeler/export personel.txt", "r", encoding="utf-8") as file:
+            eklenenler = []
+            for i in file:
+                eklenenler.append(karmaşık_liste_oluşturma(i))
+            with open("C:/Users/Msi/Desktop/Program Sonu Çıktılar/export çıktı.txt", "w",
+                      encoding="utf-8") as file2:
+                for i in eklenenler:
+                    file2.write(i)
+
+# AYM
+
+        with open("C:/Users/Msi/Desktop/bölgeler/aym.txt", "r", encoding="utf-8") as file:
+            eklenenler = []
+            for i in file:
+                eklenenler.append(karmaşık_liste_oluşturma(i))
+            with open("C:/Users/Msi/Desktop/Program Sonu Çıktılar/aym çıktı.txt", "w",
+                      encoding="utf-8") as file2:
+                for i in eklenenler:
+                    file2.write(i)
+
+# BOZULABİLİR
+
+
+        with open("C:/Users/Msi/Desktop/bölgeler/bozulabilir.txt", "r", encoding="utf-8") as file:
+
+            eklenenler = []
+            for i in file:
+                eklenenler.append(karmaşık_liste_oluşturma(i))
+            with open("C:/Users/Msi/Desktop/Program Sonu Çıktılar/bozulabilir çıktı.txt", "w",encoding="utf-8") as file2:
+                for i in eklenenler:
+                    file2.write(i)
+
+# İÇHATLAR
+
+        with open("C:/Users/Msi/Desktop/bölgeler/iç hat.txt", "r", encoding="utf-8") as file:
+            eklenenler = []
+            for i in file:
+                eklenenler.append(karmaşık_liste_oluşturma(i))
+            with open("C:/Users/Msi/Desktop/Program Sonu Çıktılar/iç hatlar çıktı.txt", "w",encoding="utf-8") as file2:
+                for i in eklenenler:
+                    file2.write(i)
+
+# BAGAJ PERSONEL
+
+
+        with open("C:/Users/Msi/Desktop/bölgeler/bagaj personel.txt", "r", encoding="utf-8") as file:
+            eklenenler = []
+            for i in file:
+                eklenenler.append(karmaşık_liste_oluşturma(i))
+            with open("C:/Users/Msi/Desktop/Program Sonu Çıktılar/bagaj çıktı.txt", "w",encoding="utf-8") as file2:
+                for i in eklenenler:
+                    file2.write(i)
+
+
+# BEYAZ YAKA DANIŞMA
+
+        with open("C:/Users/Msi/Desktop/bölgeler/beyaz yaka danışma.txt", "r", encoding="utf-8") as file:
+
+            eklenenler = []
+
+            for i in file:
+                eklenenler.append(karmaşık_liste_oluşturma(i))
+
+            with open("C:/Users/Msi/Desktop/Program Sonu Çıktılar/danışma çıktı.txt", "w",encoding="utf-8") as file2:
+
+                for i in eklenenler:
+                    file2.write(i)
+
+# HUB DOSYASININ ÇIKTI KODLARINDA
+
+        with open("C:/Users/Msi/Desktop/bölgeler/182.txt", "r", encoding="utf-8") as file:
+            liste = []
+            for i in file:
+                liste.append(i)
+
+        with open("C:/Users/Msi/Desktop/bölgeler/gdy/hub sicil.txt", "r", encoding="utf-8") as file2:
+            liste2 = []
+            for i in file2:
+                liste2.append(i)
+
+        x = set(liste)
+        y = set(liste2)
+        z = (x.difference(y))
+
+        def değer(liste):
+
+            liste = liste.split("\n")
+            sicil = liste[0]
+
+            return sicil + "\t" + "0" + "\t" + "0" + "\n"
+
+        eklencekler = []
+
+        for i in z:
+            eklencekler.append(değer(i))
+
+        with open("C:/Users/Msi/Desktop//Program Sonu Çıktılar/hub çıktı.txt", "a", encoding="utf-8") as file2:
+
+            for i in eklencekler:
+                file2.write(i)
+        with open("C:/Users/Msi/Desktop/Program Sonu Çıktılar/hub çıktı.txt", "r", encoding="utf-8") as file2:
+            liste2 = []
+            for i in file2:
+                demet = tuple(i.strip().split("\t"))
+                liste2.append(demet)
+
+        sorted_liste2 = sorted(liste2, key=lambda x: int(x[0]))
+
+        eklenecekler = []
+
+        for i in sorted_liste2:
+            eklenecekler.append(list(i))
+
+        çıktı = []
+        for i in eklenecekler:
+            çıktı.append([i[1], i[2]])
+
+        with open("C:/Users/Msi/Desktop/Program Sonu Çıktılar/hub çıktı.txt", "w", encoding="utf-8") as file2:
+            for i in çıktı:
+                file2.write(f"{i[0]}\t{i[1]}\n")
+
+# MAVİ YAKA 1 DOSYASININ ÇIKTI KODLARI
+
+        with open("C:/Users/Msi/Desktop/bölgeler/182.txt", "r", encoding="utf-8") as file:
+            liste = []
+            for i in file:
+                liste.append(i)
+
+        with open("C:/Users/Msi/Desktop/bölgeler/gdy/MAVİ YAKA 1 SİCİL.txt", "r", encoding="utf-8") as file2:
+            liste2 = []
+            for i in file2:
+                liste2.append(i)
+
+        x = set(liste)
+        y = set(liste2)
+        z = (x.difference(y))
+
+        def değer(liste):
+
+            liste = liste.split("\n")
+            sicil = liste[0]
+
+            return sicil + "\t" + "0" + "\t" + "0" + "\n"
+
+        eklencekler = []
+
+        for i in z:
+            eklencekler.append(değer(i))
+
+        with open("C:/Users/Msi/Desktop//Program Sonu Çıktılar/mavi 1 çıktı.txt", "a", encoding="utf-8") as file2:
+            for i in eklencekler:
+                file2.write(i)
+
+        with open("C:/Users/Msi/Desktop/Program Sonu Çıktılar/mavi 1 çıktı.txt", "r", encoding="utf-8") as file2:
+            liste2 = []
+            for i in file2:
+                demet = tuple(i.strip().split("\t"))
+                liste2.append(demet)
+
+        sorted_liste2 = sorted(liste2, key=lambda x: int(x[0]))
+
+        eklenecekler = []
+
+        for i in sorted_liste2:
+            eklenecekler.append(list(i))
+
+        çıktı = []
+        for i in eklenecekler:
+            çıktı.append([i[1], i[2]])
+
+        with open("C:/Users/Msi/Desktop/Program Sonu Çıktılar/mavi 1 çıktı.txt", "w", encoding="utf-8") as file2:
+            for i in çıktı:
+                file2.write(f"{i[0]}\t{i[1]}\n")
+
+# MAVİ YAKA 2 DOSYASININ ÇIKTI KODLARI
+
+
+        with open("C:/Users/Msi/Desktop/bölgeler/182.txt", "r", encoding="utf-8") as file:
+            liste = []
+            for i in file:
+                liste.append(i)
+        with open("C:/Users/Msi/Desktop/bölgeler/gdy/mavi yaka 2 sicil.txt", "r", encoding="utf-8") as file2:
+            liste2 = []
+            for i in file2:
+                liste2.append(i)
+
+        x = set(liste)
+        y = set(liste2)
+        z = (x.difference(y))
+
+        def değer(liste):
+
+            liste = liste.split("\n")
+            sicil = liste[0]
+
+            return sicil + "\t" + "0" + "\t" + "0"  + "\n"
+
+        eklencekler = []
+
+        for i in z:
+            eklencekler.append(değer(i))
+
+        with open("C:/Users/Msi/Desktop//Program Sonu Çıktılar/mavi 2 çıktı.txt", "a", encoding="utf-8") as file2:
+            for i in eklencekler:
+                file2.write(i)
+
+        with open("C:/Users/Msi/Desktop/Program Sonu Çıktılar/mavi 2 çıktı.txt", "r", encoding="utf-8") as file2:
+            liste2 = []
+            for i in file2:
+                demet = tuple(i.strip().split("\t"))
+                liste2.append(demet)
+
+        sorted_liste2 = sorted(liste2, key=lambda x: int(x[0]))
+
+        eklenecekler = []
+
+        for i in sorted_liste2:
+            eklenecekler.append(list(i))
+
+        çıktı = []
+        for i in eklenecekler:
+            çıktı.append([i[1], i[2]])
+
+        with open("C:/Users/Msi/Desktop/Program Sonu Çıktılar/mavi 2 çıktı.txt", "w", encoding="utf-8") as file2:
+            for i in çıktı:
+                file2.write(f"{i[0]}\t{i[1]}\n")
+
+# MAVİ YAKA 3 DOSYASININ ÇIKTI KODLARI
+
+
+        with open("C:/Users/Msi/Desktop/bölgeler/182.txt", "r", encoding="utf-8") as file:
+            liste = []
+            for i in file:
+                liste.append(i)
+        with open("C:/Users/Msi/Desktop/bölgeler/gdy/mavi yaka 3 sicil.txt", "r", encoding="utf-8") as file2:
+            liste2 = []
+            for i in file2:
+                liste2.append(i)
+
+        x = set(liste)
+        y = set(liste2)
+        z = (x.difference(y))
+
+        def değer(liste):
+
+            liste = liste.split("\n")
+            sicil = liste[0]
+
+            return sicil + "\t" + "0" + "\t" + "0"  + "\n"
+
+        eklencekler = []
+
+        for i in z:
+            eklencekler.append(değer(i))
+
+        with open("C:/Users/Msi/Desktop//Program Sonu Çıktılar/mavi 3 çıktı.txt", "a", encoding="utf-8") as file2:
+            for i in eklencekler:
+                file2.write(i)
+
+        with open("C:/Users/Msi/Desktop/Program Sonu Çıktılar/mavi 3 çıktı.txt", "r", encoding="utf-8") as file2:
+            liste2 = []
+            for i in file2:
+                demet = tuple(i.strip().split("\t"))
+                liste2.append(demet)
+
+        sorted_liste2 = sorted(liste2, key=lambda x: int(x[0]))
+
+        eklenecekler = []
+
+        for i in sorted_liste2:
+            eklenecekler.append(list(i))
+
+        çıktı = []
+        for i in eklenecekler:
+            çıktı.append([i[1], i[2]])
+
+        with open("C:/Users/Msi/Desktop/Program Sonu Çıktılar/mavi 3 çıktı.txt", "w", encoding="utf-8") as file2:
+            for i in çıktı:
+                file2.write(f"{i[0]}\t{i[1]}\n")
+
+# MAVİ YAKA 4 DOSYASININ ÇIKTI KODLARI
+
+        with open("C:/Users/Msi/Desktop/bölgeler/182.txt", "r", encoding="utf-8") as file:
+
+
+            liste = []
+            for i in file:
+                liste.append((i))
+
+
+            with open("C:/Users/Msi/Desktop/bölgeler/gdy/mavi yaka 4 sicil.txt", "r", encoding="utf-8") as file2:
+                liste2 = []
+                for i in file2:
+                    liste2.append(i)
+
+            x = set(liste)
+            y = set(liste2)
+            z = (x.difference(y))
+
+            def değer (liste) :
+
+                liste = liste.split("\n")
+                sicil = liste[0]
+
+                return  sicil +"\t" +"0" +"\t" +"0" + "\n"
+
+            eklencekler = []
+
+            for i in z:
+                    eklencekler.append(değer(i))
+
+
+
+        with open("C:/Users/Msi/Desktop/Program Sonu Çıktılar/mavi 4 çıktı.txt", "a",
+                        encoding="utf-8") as file2:
+            for i in eklencekler:
+
+                    file2.write(i)
+
+        with open("C:/Users/Msi/Desktop/Program Sonu Çıktılar/mavi 4 çıktı.txt", "r", encoding="utf-8") as file2:
+            liste2 = []
+            for i in file2:
+                demet = tuple(i.strip().split("\t"))
+                liste2.append(demet)
+
+        sorted_liste2 = sorted(liste2, key=lambda x: int(x[0]))
+
+        eklenecekler = []
+
+        for i in sorted_liste2:
+            eklenecekler.append(list(i))
+
+        çıktı = []
+        for i in eklenecekler:
+            çıktı.append([i[1], i[2]])
+
+        with open("C:/Users/Msi/Desktop/Program Sonu Çıktılar/mavi 4 çıktı.txt", "w", encoding="utf-8") as file2:
+            for i in çıktı:
+                file2.write(f"{i[0]}\t{i[1]}\n")
+
+# EXPORT PERSONEL DOSYASININ ÇIKTI KODLARI
+
+        with open("C:/Users/Msi/Desktop/bölgeler/182.txt", "r", encoding="utf-8") as file:
+
+            liste = []
+            for i in file:
+                liste.append(i)
+
+        with open("C:/Users/Msi/Desktop/bölgeler/gdy/export sicil.txt", "r", encoding="utf-8") as file2:
+            liste2 = []
+            for i in file2:
+                liste2.append(i)
+
+        x = set(liste)
+        y = set(liste2)
+        z = (x.difference(y))
+
+        def değer(liste):
+
+            liste = liste.split("\n")
+            sicil = liste[0]
+
+            return sicil + "\t" + "0" + "\t" + "0" + "\n"
+
+        eklencekler = []
+
+        for i in z:
+            eklencekler.append(değer(i))
+
+        with open("C:/Users/Msi/Desktop/Program Sonu Çıktılar/export çıktı.txt", "a", encoding="utf-8") as file2:
+            for i in eklencekler:
+                file2.write(i)
+
+        with open("C:/Users/Msi/Desktop/Program Sonu Çıktılar/export çıktı.txt", "r", encoding="utf-8") as file2:
+            liste2 = []
+            for i in file2:
+                demet = tuple(i.strip().split("\t"))
+                liste2.append(demet)
+
+        sorted_liste2 = sorted(liste2, key=lambda x: int(x[0]))
+
+        eklenecekler = []
+
+        for i in sorted_liste2:
+            eklenecekler.append(list(i))
+
+        çıktı = []
+        for i in eklenecekler:
+            çıktı.append([i[1], i[2]])
+
+        with open("C:/Users/Msi/Desktop/Program Sonu Çıktılar/export çıktı.txt", "w", encoding="utf-8") as file2:
+            for i in çıktı:
+                file2.write(f"{i[0]}\t{i[1]}\n")
+
+# GDY ZEMİN DOSYASININ ÇIKTI KODLARI
+
+        with open("C:/Users/Msi/Desktop/bölgeler/182.txt", "r", encoding="utf-8") as file:
+                    liste = []
+                    for i in file:
+                        liste.append(i)
+
+        with open("C:/Users/Msi/Desktop/bölgeler/gdy/gdy zemin sicil.txt", "r",
+                          encoding="utf-8") as file2:
+                    liste2 = []
+
+                    for i in file2:
+                        liste2.append(i)
+
+        x = set(liste)
+        y = set(liste2)
+        z = (x.difference(y))
+
+        def değer(liste):
+
+            liste = liste.split("\n")
+            sicil = liste[0]
+
+            return sicil + "\t" + "0" + "\t" + "0" + "\n"
+
+        eklencekler = []
+
+        for i in z:
+            eklencekler.append(değer(i))
+
+        with open("C:/Users/Msi/Desktop/Program Sonu Çıktılar/gdy zemin çıktı.txt", "a", encoding="utf-8") as file2:
+            for i in eklencekler:
+                file2.write(i)
+
+        with open("C:/Users/Msi/Desktop/Program Sonu Çıktılar/gdy zemin çıktı.txt", "r", encoding="utf-8") as file2:
+            liste2 = []
+            for i in file2:
+                demet = tuple(i.strip().split("\t"))
+                liste2.append(demet)
+
+        sorted_liste2 = sorted(liste2, key=lambda x: int(x[0]))
+
+        eklenecekler = []
+
+        for i in sorted_liste2:
+            eklenecekler.append(list(i))
+
+        çıktı = []
+        for i in eklenecekler:
+            çıktı.append([i[1], i[2]])
+
+        with open("C:/Users/Msi/Desktop/Program Sonu Çıktılar/gdy zemin çıktı.txt", "w", encoding="utf-8") as file2:
+            for i in çıktı:
+                file2.write(f"{i[0]}\t{i[1]}\n")
+
+# GDY 1.KAT DOSYASININ ÇIKTI KODLARI
+
+        with open("C:/Users/Msi/Desktop/bölgeler/182.txt", "r", encoding="utf-8") as file:
+            liste = []
+            for i in file:
+                liste.append(i)
+
+        with open("C:/Users/Msi/Desktop/bölgeler/gdy/gdy 1 kat sicil.txt", "r", encoding="utf-8") as file2:
+            liste2 = []
+            for i in file2:
+                liste2.append(i)
+
+        x = set(liste)
+        y = set(liste2)
+        z = (x.difference(y))
+
+        def değer(liste):
+
+            liste = liste.split("\n")
+            sicil = liste[0]
+
+            return sicil + "\t" + "0" + "\t" + "0"  + "\n"
+
+        eklencekler = []
+
+        for i in z:
+            eklencekler.append(değer(i))
+        with open("C:/Users/Msi/Desktop/Program Sonu Çıktılar/gdy 1 kat çıktı.txt", "a", encoding="utf-8") as file2:
+            for i in eklencekler:
+                file2.write(i)
+
+        with open("C:/Users/Msi/Desktop/Program Sonu Çıktılar/gdy 1 kat çıktı.txt", "r", encoding="utf-8") as file2:
+            liste2 = []
+            for i in file2:
+                demet = tuple(i.strip().split("\t"))
+                liste2.append(demet)
+
+        sorted_liste2 = sorted(liste2, key=lambda x: int(x[0]))
+
+        eklenecekler = []
+
+        for i in sorted_liste2:
+            eklenecekler.append(list(i))
+
+        çıktı = []
+        for i in eklenecekler:
+            çıktı.append([i[1], i[2]])
+
+        with open("C:/Users/Msi/Desktop/Program Sonu Çıktılar/gdy 1 kat çıktı.txt", "w", encoding="utf-8") as file2:
+            for i in çıktı:
+                file2.write(f"{i[0]}\t{i[1]}\n")
+
+
+
+# AYM DOSYASININ ÇIKTI KODLARI
+
+        with open("C:/Users/Msi/Desktop/bölgeler/182.txt", "r", encoding="utf-8") as file:
+
+            liste = []
+            for i in file:
+                liste.append(i)
+
+        with open("C:/Users/Msi/Desktop/bölgeler/gdy/aym sicil.txt", "r", encoding="utf-8") as file2:
+            liste2 = []
+            for i in file2:
+                liste2.append(i)
+
+        x = set(liste)
+        y = set(liste2)
+        z = (x.difference(y))
+
+        def değer(liste):
+
+            liste = liste.split("\n")
+            sicil = liste[0]
+
+            return sicil + "\t" + "0" + "\t" + "0"  + "\n"
+
+        eklencekler = []
+
+        for i in z:
+            eklencekler.append(değer(i))
+
+        with open("C:/Users/Msi/Desktop//Program Sonu Çıktılar/aym çıktı.txt", "a", encoding="utf-8") as file2:
+            for i in eklencekler:
+                file2.write(i)
+
+        with open("C:/Users/Msi/Desktop/Program Sonu Çıktılar/aym çıktı.txt", "r", encoding="utf-8") as file2:
+            liste2 = []
+            for i in file2:
+                demet = tuple(i.strip().split("\t"))
+                liste2.append(demet)
+
+        sorted_liste2 = sorted(liste2, key=lambda x: int(x[0]))
+
+        eklenecekler = []
+
+        for i in sorted_liste2:
+            eklenecekler.append(list(i))
+
+        çıktı = []
+        for i in eklenecekler:
+            çıktı.append([i[1], i[2]])
+
+        with open("C:/Users/Msi/Desktop/Program Sonu Çıktılar/aym çıktı.txt", "w", encoding="utf-8") as file2:
+            for i in çıktı:
+                file2.write(f"{i[0]}\t{i[1]}\n")
+
+# BOZULABİLİR DOSYASININ ÇIKTI KODLARI
+
+        with open("C:/Users/Msi/Desktop/bölgeler/182.txt", "r", encoding="utf-8") as file:
+
+            liste = []
+            for i in file:
+                liste.append(i)
+
+        with open("C:/Users/Msi/Desktop/bölgeler/gdy/bozulabilir sicil.txt", "r", encoding="utf-8") as file2:
+            liste2 = []
+
+            for i in file2:
+                liste2.append(i)
+
+        x = set(liste)
+        y = set(liste2)
+        z = (x.difference(y))
+
+        def değer(liste):
+
+            liste = liste.split("\n")
+            sicil = liste[0]
+
+            return sicil + "\t" + "0" + "\t" + "0"  + "\n"
+
+        eklencekler = []
+
+        for i in z:
+            eklencekler.append(değer(i))
+
+        with open("C:/Users/Msi/Desktop//Program Sonu Çıktılar/bozulabilir çıktı.txt", "a", encoding="utf-8") as file2:
+            for i in eklencekler:
+                file2.write(i)
+
+        with open("C:/Users/Msi/Desktop/Program Sonu Çıktılar/bozulabilir çıktı.txt", "r", encoding="utf-8") as file2:
+            liste2 = []
+            for i in file2:
+                demet = tuple(i.strip().split("\t"))
+                liste2.append(demet)
+
+        sorted_liste2 = sorted(liste2, key=lambda x: int(x[0]))
+
+        eklenecekler = []
+
+        for i in sorted_liste2:
+            eklenecekler.append(list(i))
+
+        çıktı = []
+        for i in eklenecekler:
+            çıktı.append([i[1], i[2]])
+
+        with open("C:/Users/Msi/Desktop/Program Sonu Çıktılar/bozulabilir çıktı.txt", "w", encoding="utf-8") as file2:
+            for i in çıktı:
+                file2.write(f"{i[0]}\t{i[1]}\n")
+
+# İÇ HATLAR DOSYASININ ÇIKTI KODLARI
+
+        with open("C:/Users/Msi/Desktop/bölgeler/182.txt", "r", encoding="utf-8") as file:
+
+            liste = []
+            for i in file:
+                liste.append((i))
+
+            with open("C:/Users/Msi/Desktop/bölgeler/gdy/iç hatlar sicil.txt", "r", encoding="utf-8") as file2:
+                liste2 = []
+                for i in file2:
+                    liste2.append(i)
+
+            x = set(liste)
+            y = set(liste2)
+            z = (x.difference(y))
+
+            def değer(liste):
+
+                liste = liste.split("\n")
+                sicil = liste[0]
+
+                return sicil + "\t" + "0" + "\t" + "0" + "\n"
+
+            eklencekler = []
+
+            for i in z:
+                eklencekler.append(değer(i))
+
+        with open("C:/Users/Msi/Desktop/Program Sonu Çıktılar/iç hatlar çıktı.txt", "a",
+                  encoding="utf-8") as file2:
+            for i in eklencekler:
+                file2.write(i)
+
+        with open("C:/Users/Msi/Desktop/Program Sonu Çıktılar/iç hatlar çıktı.txt", "r", encoding="utf-8") as file2:
+            liste2 = []
+            for i in file2:
+                demet = tuple(i.strip().split("\t"))
+                liste2.append(demet)
+
+        sorted_liste2 = sorted(liste2, key=lambda x: int(x[0]))
+
+        eklenecekler = []
+
+        for i in sorted_liste2:
+            eklenecekler.append(list(i))
+
+        çıktı = []
+        for i in eklenecekler:
+            çıktı.append([i[1], i[2]])
+
+        with open("C:/Users/Msi/Desktop/Program Sonu Çıktılar/iç hatlar çıktı.txt", "w", encoding="utf-8") as file2:
+            for i in çıktı:
+                file2.write(f"{i[0]}\t{i[1]}\n")
+
+# BAGAJ PERSONEL
+
+        with open("C:/Users/Msi/Desktop/bölgeler/182.txt", "r", encoding="utf-8") as file:
+
+            liste = []
+            for i in file:
+                liste.append(i)
+
+        with open("C:/Users/Msi/Desktop/bölgeler/gdy/bagaj sicil.txt", "r", encoding="utf-8") as file2:
+            liste2 = []
+            for i in file2:
+                liste2.append(i)
+
+        x = set(liste)
+        y = set(liste2)
+        z = (x.difference(y))
+
+        def değer(liste):
+
+            liste = liste.split("\n")
+            sicil = liste[0]
+
+            return sicil + "\t" + "0" + "\t" + "0" + "\n"
+
+
+        eklencekler = []
+
+        for i in z:
+            eklencekler.append(değer(i))
+        with open("C:/Users/Msi/Desktop/Program Sonu Çıktılar/bagaj çıktı.txt", "a", encoding="utf-8") as file2:
+
+            for i in eklencekler:
+                file2.write(i)
+
+        with open("C:/Users/Msi/Desktop/Program Sonu Çıktılar/bagaj çıktı.txt", "r", encoding="utf-8") as file2:
+            liste2 = []
+            for i in file2:
+                demet = tuple(i.strip().split("\t"))
+                liste2.append(demet)
+
+        sorted_liste2 = sorted(liste2, key=lambda x: int(x[0]))
+
+        eklenecekler = []
+
+        for i in sorted_liste2:
+            eklenecekler.append(list(i))
+
+        çıktı = []
+        for i in eklenecekler:
+            çıktı.append([i[1], i[2]])
+
+        with open("C:/Users/Msi/Desktop/Program Sonu Çıktılar/bagaj çıktı.txt", "w", encoding="utf-8") as file2:
+            for i in çıktı:
+                file2.write(f"{i[0]}\t{i[1]}\n")
+# BEYAZ YAKA DANIŞMA PERSONEL
+
+        with open("C:/Users/Msi/Desktop/bölgeler/182.txt", "r", encoding="utf-8") as file:
+
+            liste = []
+            for i in file:
+                liste.append(i)
+
+        with open("C:/Users/Msi/Desktop/bölgeler/gdy/beyaz yaka danışma sicil.txt", "r", encoding="utf-8") as file2:
+            liste2 = []
+            for i in file2:
+                liste2.append(i)
+
+        x = set(liste)
+        y = set(liste2)
+        z = (x.difference(y))
+
+        def değer(liste):
+
+            liste = liste.split("\n")
+            sicil = liste[0]
+
+            return sicil + "\t" + "0" + "\t" + "0" + "\n"
+
+        eklencekler = []
+
+        for i in z:
+            eklencekler.append(değer(i))
+        with open("C:/Users/Msi/Desktop/Program Sonu Çıktılar/danışma çıktı.txt", "a", encoding="utf-8") as file2:
+
+            for i in eklencekler:
+                file2.write(i)
+        with open("C:/Users/Msi/Desktop/Program Sonu Çıktılar/danışma çıktı.txt", "r", encoding="utf-8") as file2:
+            liste2 = []
+            for i in file2:
+                demet = tuple(i.strip().split("\t"))
+                liste2.append(demet)
+
+        sorted_liste2 = sorted(liste2, key=lambda x: int(x[0]))
+
+        eklenecekler = []
+
+        for i in sorted_liste2:
+            eklenecekler.append(list(i))
+
+        çıktı = []
+        for i in eklenecekler:
+            çıktı.append([i[1], i[2]])
+
+        with open("C:/Users/Msi/Desktop/Program Sonu Çıktılar/danışma çıktı.txt", "w", encoding="utf-8") as file2:
+            for i in çıktı:
+                file2.write(f"{i[0]}\t{i[1]}\n")
+
+
+TIP_VERİLERİN_ÇIKTI_RAPORLARI = TIP()
+
+
